@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href= "style.css">
+</head>
+<body>
+
+    <div class= "header">
+        JavaScript - Array of Objects
+    </div>
+    <hr>
+
+    <p>Question 1: We are interested in retrieving only the students' names; all the names should be in caps.
+    </p>
+    <p> ['JOHN', 'BABA', 'YAGA', 'WICK']</p>
+
+    <pre>
+<u>Answer</u>
+
+let studentRecords=[{name:'John',id:123,marks:98},
+{name:'Baba',id:101,marks:23},
+{name:'Yaga',id:200,marks:45},
+{name:'Wick',id:115,marks:75}]
+
+let ans=[];
+for(i=0; < studentRecords.length;i++){
+  ans.push(studentRecords[i].name.toUpperCase())
+}
+console.log(ans)
+    </pre>
+
+    <hr>
+
+    <p>Question 2: Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.</p>
+
+    <pre>
+<u>Answer</u>
+
+let studentRecords=[{name:'John',id:123,marks:98},
+{name:'Baba',id:101,marks:23},
+{name:'Yaga',id:200,marks:45},
+{name:'Wick',id:115,marks:75}]
+
+ans=[]
+for(i=0;i< studentRecords.length;i++){
+   if(studentRecords[i].marks>50){
+    ans.push(studentRecords[i])
+   }    
+}
+console.log(ans)
+    </pre>
+
+    <hr>
+
+    <p>Question 3: Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.</p>
+    <pre>
+<u>Answer</u>
+
+let studentRecords=[{name:'John',id:123,marks:98},
+{name:'Baba',id:101,marks:23},
+{name:'Yaga',id:200,marks:45},
+{name:'Wick',id:115,marks:75}]
+
+ans=[]
+for(i=0;i< studentRecords.length;i++){
+   if(studentRecords[i].marks>50 && studentRecords[i].id>100){
+    ans.push(studentRecords[i])
+   }    
+}
+console.log(ans)
+    </pre>
+
+    <hr>
+
+    <p>Question 4: Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.</p>
+    <pre>
+<u>Answer</u>
+
+let studentRecords=[{name:'John',id:123,marks:98},
+{name:'Baba',id:101,marks:23},
+{name:'Yaga',id:200,marks:45},
+{name:'Wick',id:115,marks:75}]
+
+ans=0
+for(i=0;i< studentRecords.length;i++){
+   ans+=studentRecords[i].marks  
+}
+console.log(ans)
+    </pre>
+
+    <hr>
+
+    <p>Question 5: This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.
+    </p>
+
+    <pre>
+<u>Answer</u>
+
+let studentRecords=[{name:'John',id:123,marks:98},
+{name:'Baba',id:101,marks:23},
+{name:'Yaga',id:200,marks:45},
+{name:'Wick',id:115,marks:75}]
+
+ans=[]
+for(i=0;i< studentRecords.length;i++){
+   if(studentRecords[i].marks>50){
+    ans.push(studentRecords[i].name)
+   }    
+}
+console.log(ans)
+    </pre>
+
+    <hr>
+
+    <p>Question 6: This time we are required to print the sum of marks of the students with id > 120.
+    </p>
+    <pre>
+<u>Answer</u>
+
+let studentRecords=[{name:'John',id:123,marks:98},
+{name:'Baba',id:101,marks:23},
+{name:'Yaga',id:200,marks:45},
+{name:'Wick',id:115,marks:75}]
+
+ans=0
+for(i=0;i< studentRecords.length;i++){
+   if(studentRecords[i].id>120){
+    ans+=studentRecords[i].marks
+   }    
+}
+console.log(ans)
+    </pre>
+
+    <hr>
+
+    <p>Question 7: This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.
+    </p>
+
+    <pre>
+<u>Answer</u>
+
+let studentRecords=[{name:'John',id:123,marks:98},
+{name:'Baba',id:101,marks:23},
+{name:'Yaga',id:200,marks:45},
+{name:'Wick',id:115,marks:75}]
+
+ans=[]
+for(i=0;i< studentRecords.length;i++){
+   if(studentRecords[i].marks< 50){
+    studentRecords[i].marks=studentRecords[i].marks+15
+   }
+   
+}
+for(i=0;i< studentRecords.length;i++){
+  if(studentRecords[i].marks>50){
+    ans.push(studentRecords[i])
+   }
+}
+
+console.log(ans)
+    </pre>
+
+    <hr>
+
+<p>Question 8: Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. 
+</p>
+<pre>
+<u>Answer</u>
+
+let NewAOO=[{name:'Harry',class:'Java',rollno:111},
+{name:'Potter',class:'Python',rollno:112},
+{name:'Ron',class:'Sql',rollno:113},
+{name:'Wisely',class:'Javscript',rollno:114},
+{name:'Herminey',class:'Selenium',rollno:115},
+{name:'Grenger',class:'Machine learning',rollno:116}]
+console.log(NewAOO)
+</pre>
+    
+    
+</body>
+</html>
